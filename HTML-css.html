@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>CSS & HTML</title>
+	<!-- Abaixo, exemplo de caminho da folha de estilo -->
+	<link rel="stylesheet" href="estilo.css">
+	
+	<!-- Exemplos de referências externas de CSS 
+	
+	Arquivo se encontra na WEB
+	<link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
+	
+	Arquivo se encontra em um diretório
+	<link rel="stylesheet" href="/html/styles.css">
+	
+	No exemplo que está sendo usado para o arquivo atual, o CSS se encontra no mesmo diretório que o HTML
+	<link rel="stylesheet" href="styles.css">
+
+	-->
+	
+	<style>
+		 /* CSS interno: com a tag style no head
+		 Também pode definir o estilo da página HTML */
+		 body{
+		 	/* Cor de fundo do elemento */
+		 	background-color: powderblue;
+		 }
+		 h2{
+		 	/* Cor do texto */
+		 	color: blue;
+		 	/* Tipo de fonte */
+		 	font-family: verdana;
+		 	/* Tamanho da fonte */
+		 	font-size: 300%;
+		 }
+		 p{
+		 	color: red;
+		 	font-family: courier;
+		 	font-size: 160%;
+		 	/* Definição de borda para o elemento */
+		 	border: 1px solid black;
+		 	/* Definição de espaço interno entre o conteúdo e a borda */
+		 	padding: 30px;
+		 	/* Definição de espaço externo entre o conteúdo e a borda */
+		 	margin: 50px;
+		 }
+	</style>
+</head>
+<body>
+	<!-- CSS Inline: aplicado a partir do atributo style na tag HTML -->
+	<h1 style="color:blue;">Este é um cabeçalho azul!</h1>
+
+	<!-- Abaixo, referência para o exemplo da tag style -->
+	<h2>Este é um cabeçalho.</h2>
+	<p>Este é um parágrafo.</p>
+
+	<!-- Abaixo, exemplo que ilustra CSS esterno a partir da localização do arquivo no HEAD -->
+	<h3>Este é um cabeçalho!</h3>
+	<blockquote>Este é um blockquote!</blockquote>
+
+	<!-- Atributo id: define um estilo específico para um elemento HTML -->
+	<p id="p01">Eu sou diferente!</p>
+
+	<!-- Atributo class: define um estilo para tipos específicos de elementos -->
+	<p class="error">Eu sou diferente 2!</p>
+</body>
+</html>
