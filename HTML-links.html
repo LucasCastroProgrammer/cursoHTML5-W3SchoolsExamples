@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Links em HTML</title>
+	<style>
+		
+		/* Estilo do link antes do click*/
+		a:link{
+			color: green;
+			background-color: transparent;
+			text-decoration: none;
+		}
+
+		/* Estilo do link após o click */
+		a:visited{
+			color: pink;
+			background-color: transparent;
+			text-decoration: none;
+		}
+
+		/* Estilo do link ao passar o mouse em cima */
+		a:hover{
+			color: red;
+			background-color: transparent;
+			text-decoration: underline;
+		}
+
+		/* Estilo do link no momento do click*/
+		a:active{
+			color: yellow;
+			background-color: transparent;
+			text-decoration: underline;
+		}
+
+		/* CSS para estilizar o link como botão */
+		#link1{
+			margin: 20px;
+		}
+
+		#link1:link, #link1:visited{
+			background-color: #f44336;
+			color: white;
+			padding: 15px 25px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+		}
+
+		#link1:hover, a:active{
+			background-color: red;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<!-- Um link pode ser um texto, imagem, ou um elemento HTML -->
+	<a href="#aquivaiumaurl">Texto do link</a>
+	<br>
+	<a href="https://www.google.com.br">Visite o site do Google!</a>
+	
+	<br>
+	<!-- Links locais -->
+	<a href="http://www.w3schools.com" target="_blank">Visite o site do W3Schools</a>
+
+	<!-- target="_blank": vai abrir uma nova aba com o endereço referenciado no href -->
+
+	<!-- 
+		-> Um link não visitado está azul;
+		-> Um link visitado está roxo;
+		-> Um link ativo está vermelho.
+	-->
+	<br>
+	<a href="https://www.udacity.com" target="_blank" id="link1">Este é um link!</a>
+
+	<!-- O atributo target especifica onde abrir o endereço linkado -->
+	<br>
+
+	<!-- _blank abre outra aba com o endereço linkado -->
+	<a href="https://www.w3schools.com" target="_blank">Visite a W3Schools</a>
+	<br>
+
+	<!-- _top ignora a estrutura dos frames, pois carrega a página por toda a extensão do navegador -->
+	<a href="https://www.w3schools.com/html/" target="_top">HTML5 tutorial</a>
+
+
+	<br>
+	<h2>Imagens como link: exemplo!</h2>
+	<a href="https://www.w3schools.com">
+		<img src="farol.jpg" alt="Faról" style="width: 42px;
+		height: 42px; border: 0;">
+	</a>
+
+	<!-- O atributo title especifica informações extra sobre um elemento. A informação tem estilo de uma uma dica, quando o mouse é movido acima do elemento. -->
+	<br>
+	<a href="https://www.w3schools.com/html/" title="Vá para a seção HTML do W3Schools">Visite o tutorial HTML</a>
+
+	<!-- O que são bookmarks?
+		São atributos usados para habilitar usuários a pular para partes específicas da página.
+		São bem úteis se a página é muito longa.
+		Vamos ver alguns exemplos abaixo. 
+	-->
+	<!-- Criando um bookmark com id: -->
+	<br>
+	<a href="#C4">Pular para o capítulo 4</a>
+
+	<h2 id="C1">Capítulo 1</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C2">Capítulo 2</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C3">Capítulo 3</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C4">Capítulo 4</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C5">Capítulo 5</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C6">Capítulo 6</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C7">Capítulo 7</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C8">Capítulo 8</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C9">Capítulo 9</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C10">Capítulo 10</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C11">Capítulo 11</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C12">Capítulo 12</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C13">Capítulo 13</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C14">Capítulo 14</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C15">Capítulo 15</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C16">Capítulo 16</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C17">Capítulo 17</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C18">Capítulo 18</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C19">Capítulo 19</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C20">Capítulo 20</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C21">Capítulo 21</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C22">Capítulo 22</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C23">Capítulo 23</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C24">Capítulo 24</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<h2 id="C25">Capítulo 25</h2>
+	<p>Este capítulo fala sobre bla, bla, bla</p>
+
+	<!-- URL completa -->
+	<a href="https://www.w3schools.com/html/default.asp">Tutorial HTML - 1</a>
+
+	<!-- URL com somente a pasta HTML e o arquivo 
+		<a href="/html/default.asp">Tutorial HTML - 2</a>
+	-->
+
+	<!-- URL com a arquivo na mesma pasta do atual 
+		<a href="default.asp">HTML Tutorial</a>
+	-->
+</body>
+</html>
