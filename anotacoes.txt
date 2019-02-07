@@ -93,3 +93,15 @@ Use the target attribute to define where to open the linked document
 Use the <img> element (inside <a>) to use an image as a link
 Use the id attribute (id="value") to define bookmarks in a page
 Use the href attribute (href="#value") to link to the bookmark
+
+Imagens
+Use the HTML <img> element to define an image
+Use the HTML src attribute to define the URL of the image
+Use the HTML alt attribute to define an alternate text for an image, if it cannot be displayed
+Use the HTML width and height attributes to define the size of the image
+Use the CSS width and height properties to define the size of the image (alternatively)
+Use the CSS float property to let the image float
+Use the HTML <map> element to define an image-map
+Use the HTML <area> element to define the clickable areas in the image-map
+Use the HTML <img>'s element usemap attribute to point to an image-map
+Use the HTML <picture> element to show different images for different devices
