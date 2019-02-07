@@ -1,0 +1,19 @@
+body{
+	background-color: powderblue;
+}
+
+h3{
+	color: blue;
+}
+
+blockquote{
+	color: red;
+}
+
+#p01{
+	color: blue;
+}
+
+p.error{
+	color: #af3251;
+}
