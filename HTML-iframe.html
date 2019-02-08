@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Iframes em HTML</title>
+	<style>
+		iframe{
+			border: 2px solid red;
+		}
+	</style>
+</head>
+<body>
+	<!-- Um Iframe é usado para mostrar uma página web dentro de uma página WEB -->
+	<!-- A estrutura do IFrame é <iframe src="URL"></iframe> -->
+
+	<!-- As especificações do tamanho do IFrame podem ser feitas por pixels ou porcentagem -->
+	<iframe src="https://www.bing.com" style="height: 200px;width: 300px;"></iframe>
+
+	<!-- Com o atributo target abaixo, você direciona uma requisição de um endereço para o seu iframe. -->
+	<iframe src="https://www.bing.com" name="iframe_a"></iframe>
+
+	<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+</body>
+</html>
