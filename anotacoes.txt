@@ -105,3 +105,18 @@ Use the HTML <map> element to define an image-map
 Use the HTML <area> element to define the clickable areas in the image-map
 Use the HTML <img>'s element usemap attribute to point to an image-map
 Use the HTML <picture> element to show different images for different devices
+
+Tabelas
+Use the HTML <table> element to define a table
+Use the HTML <tr> element to define a table row
+Use the HTML <td> element to define a table data
+Use the HTML <th> element to define a table heading
+Use the HTML <caption> element to define a table caption
+Use the CSS border property to define a border
+Use the CSS border-collapse property to collapse cell borders
+Use the CSS padding property to add padding to cells
+Use the CSS text-align property to align cell text
+Use the CSS border-spacing property to set the spacing between cells
+Use the colspan attribute to make a cell span many columns
+Use the rowspan attribute to make a cell span many rows
+Use the id attribute to uniquely define one table
