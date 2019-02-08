@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Atributo class em HTML</title>
+	<style>
+		.cities{
+			background-color: black;
+			color: white;
+			margin: 20px;
+			padding: 20px;
+		}
+
+		span.note{
+			font-size: 120%;
+			color: red;
+		}
+
+		/* para selecionar uma classe, use o . e o nome da classe */
+		.city{
+			background-color: tomato;
+			color:white;
+			padding: 10px;
+		}
+
+		.main{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	
+	<!-- Atributo class geralmente usado para estilizar blocos de conteúdo que devem receber estilos iguais -->
+	<div class="cities">
+		<h2>Londres</h2>
+		<p>Londres é a capital da Inglaterra.</p>
+	</div>
+
+	<div class="cities">
+		<h2>Paris</h2>
+		<p>Paris é a capital da França.</p>
+	</div>
+
+	<div class="cities">
+		<h2>Toquio</h2>
+		<p>Toquio é a capital do Japão.</p>
+	</div>
+
+	<h2>Atributo class usado em elementos inline</h2>
+	<!-- O nome da classe é case-sensitive. Cuidado! -->
+	<h1>Meu cabeçalho <span class="note">importante</span></h1>
+	<p>Este é um texto <span class="note">importante</span>.</p>
+
+	<h2>Exemplos de seleção de uma classe específica</h2>
+	<h2>O atributo classe</h2>
+	<p>Uso CSS para estilizar elementos com a nome da classe "city"</p>
+
+	<h2 class="city">Londres</h2>
+	<p>Londres é a capital da Inglaterra.</p>
+
+	<h2 class="city">Paris</h2>
+	<p>Paris é a capital da França.</p>
+
+	<h2 class="city">Toquio</h2>
+	<p>Toquio é a capital do Japão.</p>
+
+	<h2>Múltiplas classes</h2>
+	<!-- Elementos HTML podem ter múltiplas classes. Porém as mesmas devem ser separadas com um espaço -->
+	<h2 class="city main">Londres</h2>
+	<h2 class="city">Paris</h2>
+	<h2 class="city">Toquio</h2>
+
+	<h1>Mesmo estilo para tags diferentes!</h1>
+	<h2 class="city">Tags diferentes podem compartilhar a mesma classe...</h2>
+	<p class="city">E consequentemente o mesmo estilo.</p>
+
+	<!-- Pode-se acessar elementos com uma classe específica através do comando getElementsByClassName(); -->
+	<script>
+		function myFunction() {
+			var x = document.getElementsByClassName("city");
+			for (var i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+	</script>
+
+</body>
+</html>
