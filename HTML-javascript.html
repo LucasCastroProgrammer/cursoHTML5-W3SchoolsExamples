@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Javascript em HTML</title>
+</head>
+<body>
+	<!-- Javascript torna as páginas HTML mais dinâmicas e interativas -->
+	<h1>Meu primeiro Javascript</h1>
+
+	<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Clique aqui para mostrar a data e hora.</button>
+
+	<p id="demo"></p>
+
+	<!-- Usos comuns para Javascript são manipulação de imagens, validação de formulários, e mudanças dinâmicas de conteúdo -->
+
+	<h2>Exemplo de Javascript mudando o texto em HTML.</h2>
+	<p id="demo2"></p>
+
+	<h2>Aqui vai alguns exemplos do que o Javascript pode fazer</h2>
+	<p>Javascript pode mudar o conteúdo de um elemento HTML:</p>
+	<button type="button" onclick="myFunction()">Clique aqui!</button>
+	<p id="demo3">Aqui vai uma demonstração.</p>
+
+	<h2>Pode mudar estilo...</h2>
+	<button type="button" onclick="myFunction2()">Clique aqui para mudar os estilos!</button>
+
+	<h2>E pode mudar atributos HTML!</h2>
+	<img id="myImage" src="pic_bulboff.gif" width="100" height="180">
+
+	<p>
+		<button type="button" onclick="light(1)">Luz ligada</button>
+		<button type="button" onclick="light(0)">Luz desligada</button>
+	</p>
+
+	<script>
+		document.getElementById("demo2").innerHTML = "Olá Javascript!";
+
+		function myFunction() {
+			document.getElementById("demo3").innerHTML = "Olá Javascript!";
+		}
+
+		function myFunction2(){
+			document.getElementById("demo").style.fontSize = "25px";
+			document.getElementById("demo2").style.color = "red";
+			document.getElementById("demo3").style.backgroundColor = "yellow";
+		}
+
+		function light(sw){
+			var pic;
+			if(sw == 0){
+				pic = "pic_bulboff.gif";
+			}
+			else{
+				pic = "pic_bulbon.gif";
+			}
+			document.getElementById('myImage').src = pic;
+		}
+	</script>
+
+	<!-- A tag noscript é usada para providenciar um conteúdo alternativo para os usuários quando eles desabilitaram a execução de scripts em seus navegadores ou quando o navegador não tem suporte para scripts client-side -->
+	<noscript>Desculpe, seu navegador não dá suporte a Javascript!</noscript>
+</body>
+</html>
