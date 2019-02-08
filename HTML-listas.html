@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Listas em HTML</title>
+	<style>
+		/*Listas horizontais com CSS*/
+		ul#nav-list{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333333;
+		}
+
+		li#nav-list{
+			float: left;
+		}
+
+		li a{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 16px;
+			text-decoration: none;
+		}
+		
+		li a:hover{
+			background-color: #111111;
+		}
+	</style>
+</head>
+<body>
+	
+	<h2>Uma lista não ordenada em HTML</h2>
+	<ul>
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>
+	</ul>
+
+	<h2>Uma lista ordenada em HTML</h2>
+	<!-- Por default, a lista ordenada mostra números -->
+	<ol>
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>
+	</ol>
+
+	<!-- atributo list-style-type:disc serve para estilizar as marcações das listas não ordenadas -->
+	<h2>Estilizando marcações da lista não-ordenada!</h2>
+	<ul style="list-style-type: disc;">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>
+	</ul>
+
+	<ul style="list-style-type: circle;">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>
+	</ul>
+
+	<ul style="list-style-type: square;">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>
+	</ul>
+
+	<ul style="list-style-type: none;">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>
+	</ul>
+
+	<h2>Estilizando marcações da lista ordenada!</h2>
+	<!-- Ordena por números -->
+	<ol type="1">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>		
+	</ol>
+
+	<!-- Ordena por letras em maiúsculos -->
+	<ol type="A">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>
+	</ol>
+
+	<!-- Ordena por letras em minúsculo -->
+	<ol type="a">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>
+	</ol>
+
+	<!-- Ordena por algarismos romanos em maiúsculo -->
+	<ol type="I">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>
+	</ol>
+
+	<!-- Ordena por algarismos romanos em minúsculo -->
+	<ol type="i">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>
+	</ol>
+
+	<h2>Listas descritivas</h2>
+	<!-- Listas descritivas apresentam uma coleção de descrições de respectivos termos -->
+	<dl>
+		<dt>Café</dt>
+		<dd>- Bebida quente e de cor escura</dd>
+		<dt>Leite</dt>
+		<dd>- Bebida fria e de cor branca</dd>
+	</dl>
+
+	<h2>Listas dentro de listas</h2>
+	<!-- Abaixo, exemplo de Nested HTML lists -->
+	<ul>
+		<li>Café</li>
+		<li>Chá
+			<ul>
+				<li>Chá preto</li>
+				<li>Chá verde</li>
+			</ul>
+		</li>
+		<li>Leite</li>
+	</ul>
+
+	<h2>Controle de contagem de lista</h2>
+	<!-- Por padrão, uma lista ordenada começa a contagem com 1. Porém, podemos mudar isso com o atributo start -->
+	<ol start="50">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>
+	</ol>
+
+	<ol start="50" type="I">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Leite</li>		
+	</ol>
+
+	<h2>Menu de navegação feito com lista!</h2>
+	<ul id="nav-list">
+		<li><a href="#home">Home</a></li>
+		<li><a href="#news">Notícias</a></li>
+		<li><a href="#contacts">Contatos</a></li>
+		<li><a href="#about">Sobre</a></li>
+	</ul>
+
+</body>
+</html>
