@@ -119,5 +119,15 @@
 		...<br>
 	</p>
 
+	<!-- No exemplo abaixo, veremos o elemento HTML picture em ação. No qual diferentes tamanhos de tela mostrarão diferentes imagens -->
+	<h2>O elemento picture!</h2>
+	<picture>
+		<source media="(min-width: 650px)" srcset="img_orange_flowers.jpg">
+
+		<source media="(min-width:465px)" srcset="img_white_flower.jpg">
+
+		<img src="img_orange_flowers.jpg" alt="Flowers" style="width: auto;">
+	</picture>
+
 </body>
 </html>
