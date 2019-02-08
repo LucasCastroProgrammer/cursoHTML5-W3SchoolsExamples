@@ -159,3 +159,15 @@ Use the CSS property float:left or display:inline to display a list horizontally
 <dl>	Defines a description list
 <dt>	Defines a term in a description list
 <dd>	Describes the term in a description list
+
+-> Elementos inline e block
+
+Block level elements in HTML:
+<address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer><form><h1>-<h6><header><hr><li><main><nav><noscript><ol><output><p><pre><section><table><tfoot><ul><video>
+
+Inline elements in HTML:
+
+<a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object><q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var>
+
+<div>	Defines a section in a document (block-level)
+<span>	Defines a section in a document (inline)
