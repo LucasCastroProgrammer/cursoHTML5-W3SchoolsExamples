@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Atributo id em HTML</title>
+	<style>
+		/* Estiliza o elemento com o id "myHeader" */
+		#myHeader{
+			background-color: lightblue;
+			color: black;
+			padding: 40px;
+			text-align: center;
+		}
+
+		/* Estiliza todos os elementos com nome de classe "city" */
+		.city{
+			background-color: tomato;
+			color: white;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<!-- O atributo id é simbolizado por #, e usado somente para um elemento. Geralmente para uma mudança específica em um item -->
+	<!-- Pode ser usado em qualquer elemento HTML, é case-sensitive e deve conter pelo menos 1 caractere sem nenhum espaço -->
+	<h1 id="myHeader">Meu cabeçalho</h1>
+
+	<button onclick="displayResult()">Mudar texto</button>
+
+	<!-- Classe pode ser aplicada para mais de um elemento. Id para somente 1 elemento -->
+	<!-- Um único elemento -->
+	<h1 id="myHeader">My cities</h1>
+
+	<!-- Múltiplos elementos similares -->
+	<h2 class="city">Londres</h2>
+	<p>Londres é a capital da Inglaterra.</p>
+
+	<h2 class="city">Paris</h2>
+	<p>Paris é a capital da França.</p>
+
+	<h2 class="city">Toquio</h2>
+	<p>Toquio é a capital do Japão.</p>
+
+	<h2>id como marcação de conteúdo na página</h2>
+	<p><a href="#C4">Vá até o capítulo 4</a></p>
+
+	<h2>Capítulo 1</h2>
+	<p>O capítulo 1 fala sobre...</p>
+
+	<h2>Capítulo 2</h2>
+	<p>O capítulo 2 fala sobre...</p>
+
+	<h2>Capítulo 3</h2>
+	<p>O capítulo 3 fala sobre...</p>
+
+	<h2 id="C4">Capítulo 4</h2>
+	<p>O capítulo 4 fala sobre...</p>
+
+	<h2>Capítulo 6</h2>
+	<p>O capítulo 6 fala sobre...</p>
+
+	<h2>Capítulo 7</h2>
+	<p>O capítulo 7 fala sobre...</p>
+
+	<h2>Capítulo 8</h2>
+	<p>O capítulo 8 fala sobre...</p>
+
+	<h2>Capítulo 9</h2>
+	<p>O capítulo 9 fala sobre...</p>
+
+	<h2>Capítulo 10</h2>
+	<p>O capítulo 10 fala sobre...</p>
+
+	<h2>Capítulo 11</h2>
+	<p>O capítulo 11 fala sobre...</p>
+
+	<h2>Capítulo 12</h2>
+	<p>O capítulo 12 fala sobre...</p>
+
+	<h2>Capítulo 13</h2>
+	<p>O capítulo 13 fala sobre...</p>
+
+	<h2>Capítulo 14</h2>
+	<p>O capítulo 14 fala sobre...</p>
+
+	<h2 >Capítulo 15</h2>
+	<p>O capítulo 15 fala sobre...</p>
+
+	<h2>Capítulo 16</h2>
+	<p>O capítulo 16 fala sobre...</p>
+
+	<h2>Capítulo 17</h2>
+	<p>O capítulo 17 fala sobre...</p>
+
+	<h2>Capítulo 18</h2>
+	<p>O capítulo 18 fala sobre...</p>
+
+	<h2>Capítulo 19</h2>
+	<p>O capítulo 19 fala sobre...</p>
+
+	<h2>Capítulo 20</h2>
+	<p>O capítulo 20 fala sobre...</p>
+
+	<script>
+		function displayResult() {
+			document.getElementById("myHeader").innerHTML = "Have a nice day!";
+		}
+	</script>
+
+</body>
+</html>
