@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<!-- O que são metadados? R: dados sobre os dados -->
+	<!-- suas tags com atributos são usadas para especificar o sistema de caracteres configurados para a página, descrição da página, palavras-chave, autor, entre outros. -->
+	<!-- Metadados são usados pelos navegadores (sobre como mostrar conteúdo), por mecanismos de busca (palavras-chave), e outros serviços da WEB -->
+	<!-- Segue abaixo exemplos de elementos Meta -->
+
+	<!-- Define o sistema de caracteres utilizado -->
+	<meta charset="utf-8">
+
+	<!-- Define a descrição da página WEB -->
+	<meta name="description" content="Free Web tutorials">
+
+	<!-- Define as palavra-chaves para mecanismos de busca -->
+	<meta name="keywords" content="HTML, CSS, XML, Javascript">
+
+	<!-- Define o autor da página -->
+	<meta name="author" content="John Doe">
+
+	<!-- Atualiza o documento a cada 30s -->
+	<meta http-equiv="refresh" content="30">
+
+	<!-- atributo viewport: ajuda na responsividade das páginas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Abaixo se define o título do documento -->
+	<title>Head em HTML</title>
+	<!-- Pode se usar a tag style para definir estilos no documento -->
+	<style></style>
+
+	<!-- Abaixo, tag link usada para realizar referencias externas para arquivos como extensões .css locais e da WEB -->
+	<link rel="stylesheet" href="#cssporexemplo.css">
+
+	<!-- O elemento script pode ser usado para definir scripts client-side -->
+	<script>
+		function myFunction() {
+			document.getElementById("demo").innerHTML = "Hello Javascript!";
+		}
+	</script>
+
+</head>
+<body>
+
+	<p>Todas as metas informações estão antes do body.</p>
+
+	<button type="button" onclick="myFunction()">Tenta aí!</button>
+
+	<p id="demo"></p>
+
+</body>
+</html>
