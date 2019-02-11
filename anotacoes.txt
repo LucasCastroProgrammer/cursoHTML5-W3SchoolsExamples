@@ -208,3 +208,35 @@ When using relative file paths, your web pages will not be bound to your current
 <samp>	Defines computer output
 <var>	Defines a variable
 <pre>	Defines preformatted text
+
+-> Entidades
+Caracteres reservados em HTML devem ser repostos com caracteres de entidade. Caracteres que não estão presentes no seu teclado também podem ser repostos por entidades.
+Vantagem em usar nome de entidade: é fácil de lembrar;
+Desvantagem: em usar nome de entidade: navegadores podem não suportar todos os nomes de entidade, mas o suporte para números é bom.
+
+Result || Description || Entity name || Entity number
+	non-breaking space	&nbsp;	&#160;
+<	less than	&lt;	&#60;
+>	greater than	&gt;	&#62;
+&	ampersand	&amp;	&#38;
+"	double quotation mark	&quot;	&#34;
+'	single quotation mark (apostrophe)	&apos;	&#39;
+¢	cent	&cent;	&#162;
+£	pound	&pound;	&#163;
+¥	yen	&yen;	&#165;
+€	euro	&euro;	&#8364;
+©	copyright	&copy;	&#169;
+®	registered trademark	&reg;	&#174;
+
+Simbolos linguísticos
+Simbolos linguísticos utilizados em letras
+
+Mark	Character	Construct	Result
+ ̀	a	a&#768;	à
+ ́	a	a&#769;	á
+̂	a	a&#770;	â
+ ̃	a	a&#771;	ã
+ ̀	O	O&#768;	Ò
+ ́	O	O&#769;	Ó
+̂	O	O&#770;	Ô
+ ̃	O	O&#771;	Õ
