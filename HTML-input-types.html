@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Tipos de input em HTML</title>
+</head>
+<body>
+	
+	<!-- tipo text: define uma linha de texto para inserção de dados -->
+	<h2>Type = "text"</h2>
+	<form>
+		Primeiro nome:<br>
+		<input type="text" name="firstname"><br>
+		Último nome:<br>
+		<input type="text" name="lastname">
+	</form>
+
+	<br>
+
+	<!-- tipo password: define um campo de senha -->
+	<h2>Type = "password"</h2>
+	<form>
+		Nome de usuário:<br>
+		<input type="text" name="username"><br>
+		Senha de usuário:<br>
+		<input type="password" name="psw">
+	</form>
+
+	<!-- tipo submit: define um botão para submeter informações inseridas no formulário. -->
+	<h2>Type = "submit"</h2>
+	<form action="#">
+		Primeiro nome:<br>
+		<input type="text" name="firstname" value="Mickey"><br>
+		Último nome:<br>
+		<input type="text" name="lastname" value="Mouse"><br>
+		<br>
+		<!-- Se você omitir o botão submit, ele escreverá submit como etiqueta padrão do botão. -->
+		<input type="submit"  name="submit">
+	</form>
+
+	<!-- A propriedade reset vai resetar todo o formulário para seus respectivos valores padrão -->
+	<h2>Type = "reset"</h2>
+	<form action="#">
+		Primeiro nome:<br>
+		<input type="text" name="firstname" value="Mickey"><br>
+		Último nome:<br>
+		<input type="text" name="lastname" value="Mouse"><br>
+		<br>
+		<input type="submit" name="submit">
+		<input type="reset">
+	</form>
+
+	<!-- tipo radio: radio-buttons deixam o usuário selecionar somente uma opção de um número limitado de escolhas -->
+	<h2>Type = "radio"</h2>
+	<form>
+		<input type="radio" name="gender" value="male" checked>
+		Male<br>
+		<input type="radio" name="gender" value="female">
+		Female<br>
+		<input type="radio" name="gender" value="other">Other
+	</form>
+
+	<!-- tipo checkbox: define uma checkbox, onde habilita o usuário a selecionar nenhuma ou mais opções de um número limitado de escolhas. -->
+	<h2>Type = "checkbox"</h2>
+	<form>
+		<input type="checkbox" name="vehicle1" value="Bike">Eu tenho uma bicicleta<br>
+		<input type="checkbox" name="vehicle2" value="Car">Eu tenho um carro<br>
+	</form>
+
+	<!-- tipo button: define um botão -->
+	<h2>Type = "button"</h2>
+	<input type="button" onclick="alert('Hello World!')" value="Clique aqui!">
+
+</body>
+</html>
