@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Formulários em HTML</title>
+</head>
+<body>
+	<h2>Formulários em HTML</h2>
+
+	<!-- O elemento form define a forma que é usada para coletar dados -->
+	<form action="#">
+		Primeiro nome:<br>
+		<input type="text" name="firstname" value="Mickey">
+		<br>
+		Último nome:<br>
+		<input type="text" name="lastname" value="mouse">
+		<br><br>
+		<input type="submit" name="submit">	
+	</form>
+
+	<!-- O elemento input  é o mais importante elemento do form. Pode ser mostrado de diversas formas, dependendo do tipo de atributo -->
+	<form>
+		Primeiro nome:<br>
+		<!-- tipo texto apresenta uma caixa de texto para preencher as informações -->
+		<!-- Tamanho padrão da caixa de texto: 20 caracteres. -->
+		<input type="text" name="firstname"><br>
+		Último nome:<br>
+		<input type="text" name="lastname"><br>
+	</form>
+
+	<form>
+		<!-- tipo radio define um radio button. Radio buttons deixa o usuário escolher somente uma opção, de um limitado número de escolhas. -->
+		<input type="radio" name="gender" value="male" checked>
+		Male<br>
+		<input type="radio" name="gender" value="female">
+		Female<br>
+		<input type="radio" name="gender" value="other">
+		other
+	</form>
+
+	<!-- O atributo action define a ação a ser performada quando o formulário é submetido. Geralmente o endereço passado no action é um servidor de scripts que administra o recebimento dessas informações. -->
+	<!-- O atributo target no caso do form, define se o resultado da submissão dos dados irá aparecer em outra tela ou na tela atual. Por padrão, vem como self -->
+	<!-- Get e Post são métodos de envio da dados que se pode configurar no sistema -->
+	<!-- GET: o método padrão de submissão de dados é o GET. Porém, quando o GET é usado, os dados submetidos no formulário aparecem na campo de endereço da página, como neste exemplo: /action_page.php?firstname=Mickey&lastname=Mouse. -->
+	<!-- Já o POST é usado sempre que o formulário de dados contém informações sensíveis ou pessoais. O método POST não mostra os dados no campo de endereço da página. -->
+	<form action="#" target="_blank" method="get/post">
+		Primeiro nome:<br>
+		<input type="text" name="firstname" value="Mickey"><br>
+		Último nome:<br>
+		<!-- Para submeter os dados, o campo input deve ter um atributo name, se não houver, o dado não é enviado. -->
+		<input type="text" name="lastname" value="Mouse"><br>
+		<!-- Define um botão para submeter os dados inseridos no sistema, geralmente esses dados são encaminhados para uma camada de processamento. -->
+		<input type="submit" value="submit">
+	</form>
+
+	<br>
+
+	<form action="#">
+		<fieldset>
+			<legend>Informação pessoal:</legend>
+			Primeiro nome:<br>
+			<input type="text" name="firstname" value="Mickey"><br>
+			Último nome:<br>
+			<input type="text" name="lastname" value="Mouse"><br>
+			<br>
+			<input type="submit" name="submit">
+		</fieldset>
+	</form>
+
+</body>
+</html>
