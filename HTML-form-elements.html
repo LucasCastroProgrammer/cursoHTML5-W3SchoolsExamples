@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Elementos de formulário em HTML</title>
+</head>
+<body>
+	<!-- O mais importante elemento do formulário é o input. O mesmo pode ser exibido de diferentes formas, dependendo do tipo de atributo. -->
+	<!-- Se o campo type for omitido, o input considera text como padrão. -->
+	<input type="firstname" name="text">
+
+	<!-- O select define uma lista drop-down -->
+	<select name="cars">
+		<!-- option define opções que podem ser selecionadas -->
+		<!-- Se quiser pré-selecionar, insira o atributo selected -->
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="fiat" selected>Fiat</option>
+		<option value="audi">Audi</option>
+	</select>
+
+	<!-- Com o atributo size, pode-se especificar o número de valores visíveis -->
+	<select name="cars" size="2">
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="fiat">Fiat</option>
+		<option value="audi">Audi</option>
+	</select>
+
+	<!-- Para habilitar múltiplas seleções, use o atributo multiple -->
+	<select name="cars" size="4" multiple>
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="fiat">Fiat</option>
+		<option value="audi">Audi</option>
+	</select>
+
+	<!-- O elemento textarea define um campo de texto com múltiplas linhas -->
+	<!-- A especificação de linhas e colunas funciona como um parâmetro para a largura e a altura da caixa de texto -->
+	<textarea name="message" rows="10" cols="30">O gato está brincando no jardim.</textarea>
+
+	<!-- Se necessário, pode-se mudar o tamanho do textarea usando CSS como o exemplo abaixo -->
+	<textarea name="message" style="width: 200px;height: 600px;">O gato está brincando no jardim!</textarea>
+
+	<!-- Propriedade do botão -->
+	<button type="button" onclick="alert('Hello World!');">Clique aqui!</button>
+
+	<!-- O elemento datalist especifica uma lista pré-definida de opções para um elemento input. Usuários verão como uma lista drop-down, para que se possa selecionar a opção. O atributo lista do input no exemplo abaixo se refere ao atributo id do elemento datalist -->
+	<form action="#">
+		<input list="browsers">
+		<datalist id="browsers">
+			<option value="Internet Explorer">
+			<option value="Firefox">
+			<option value="Chrome">
+			<option value="Opera">
+			<option value="Safari">
+		</datalist>
+	</form>
+
+	<!-- um elemento output representa o resultado de um cálculo. -->
+	<form action="#" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+		0
+		<input type="range" id="a" name="a" value="50">
+		100+
+		<input type="number" id="b" name="b" value="50">
+
+		<output name="x" for="a b"></output>
+		<input type="submit">
+	</form>
+
+</body>
+</html>
