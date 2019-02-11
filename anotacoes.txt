@@ -541,3 +541,34 @@ Character	From Windows-1252	From UTF-8
 Ä	%C4	%C3%84
 Å	%C5	%C3%85
 
+-> XHTML
+XHTML stands for EXtensible HyperText Markup Language
+XHTML is almost identical to HTML
+XHTML is stricter (mais rigoroso) than HTML
+XHTML is HTML defined as an XML application
+XHTML is supported by all major browsers
+
+XML é uma linguagem de marcação onde documentos devem ser marcados corretamente. Ou seja, bem formatados
+
+Principais diferenças do HTML:
+Document Structure
+XHTML DOCTYPE is mandatory
+The xmlns attribute in <html> is mandatory
+<html>, <head>, <title>, and <body> are mandatory
+XHTML Elements
+XHTML elements must be properly nested
+XHTML elements must always be closed
+XHTML elements must be in lowercase
+XHTML documents must have one root element
+XHTML Attributes
+Attribute names must be in lower case
+Attribute values must be quoted
+Attribute minimization is forbidden
+
+How to Convert from HTML to XHTML
+Add an XHTML <!DOCTYPE> to the first line of every page
+Add an xmlns attribute to the html element of every page
+Change all element names to lowercase
+Close all empty elements
+Change all attribute names to lowercase
+Quote all attribute values
