@@ -201,3 +201,10 @@ When using relative file paths, your web pages will not be bound to your current
 <footer> - Defines a footer for a document or a section
 <details> - Defines additional details
 <summary> - Defines a heading for the <details> element
+
+-> CÓDIGOS DE COMPUTAÇÃO
+<code>	Defines programming code
+<kbd>	Defines keyboard input 
+<samp>	Defines computer output
+<var>	Defines a variable
+<pre>	Defines preformatted text
