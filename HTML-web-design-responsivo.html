@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!-- a tag abaixo dará instruções ao browser em como controlar a dimensão e escala da página -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+
+		.left{
+			background-color: #2196F3;
+			padding: 20px;
+			float: left;
+			width: 20%;/* A largura, por padrão, é de 20% */
+		}
+
+		.main{
+			background-color: #f1f1f1;
+			padding: 20px;
+			float: left;
+			width: 60%; /* A largura, por padrão é de 60% */
+		}
+
+		.right{
+			background-color: #4CAF50;
+			padding: 20px;
+			float: left;
+			width: 20%;
+		}
+
+		.menu{
+			float: left;
+			width: 20%;
+			text-align: center;
+		}
+
+		.menu a{
+			background-color: #e5e5e5;
+			padding: 8px;
+			margin-top: 7px;
+			display: block;
+			width: 100%;
+			color: black;
+		}
+
+		.main2{
+			float: left;
+			width: 60%;
+			padding: 0 20px;
+		}
+
+		.right2{
+			background-color: #e5e5e5;
+			float: left;
+			width: 20%;
+			padding: 15px;
+			margin-top: 7px;
+			text-align: center;
+		}
+
+		@media only screen and (max-width: 620px){
+			.menu, .main2, .right2{
+				/* Para dispositivos mobile */
+				width: 100%;
+			}
+		}
+
+		/* Usar a media query para adicionar um ponto limite de 800px */
+		@media screen and (max-width: 800px){
+			.left, .main, .right{
+				width: 100%; /* A largura é de 100%, quando a janela de exibição é de 800px ou menor. */
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- O que é design responsivo? É o design do Website se adaptando conforme as dimensões de tela dos dispositivos dos usuários -->
+
+	<!-- Imagens responsivas -->
+	<!-- Se a propriedade width está configurada para 100%, a imagem será responsiva ao aumentar e diminuir a tela -->
+	<!-- Outra propriedade interessante é a max-width setada com 100%. Assim, a imagem continuará responsiva, porém terá como tamanho máximo o valor original -->
+	<img src="img_girl.jpg" style="max-width: 100%; height: auto;">
+	<img src="img_girl.jpg" style="width: 100%;">
+
+	<!-- O elemento picture permite definir diferentes imagens para diferentes tamanhos de janela de navegadores. -->	
+	<h2>Mostrar diferentes imagens dependendo da largura do Browser</h2>
+	<p>Redefina a largura do browser e a imagem irá mudar entre 600px e 1500px.</p>
+
+	<picture>
+		<source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+		<source srcset="img_flowers.jpg" media="(max-width: 1550px)">
+		<source srcset="img_white_flower.jpg">
+		<img src="img_flowers.jpg" alt="Flowers" style="width: auto;">
+	</picture>
+
+	<!-- Tamanho de texto responsivo -->
+	<!-- O tamanho do texto pode ser configurado com uma unidade vw, que significa "viewport width" -->
+	<h1 style="font-size: 10vw">Hello world!</h1>
+	<!-- Viewport é o tamanho da janela do navegador. 1vw = 1% de largura da janela de exibição (viewport). Se a janela de exibição é de 50cm, 1vw é igual a 0.5cm -->
+
+	<!-- Em adição aos tamanhos de texto e imagens. é muito comum usar media queries em páginas web responsivas. Com media queries você pode definir completamente estilos diferentes para diferentes tamanhos de navegador. -->
+	<h2>Media Queries</h2>
+	<p>Redefina a largura da janela do navegador.</p>
+
+	<p>Tenha certeza que você atingiu o limite de 800px quando redefinir esta tela.</p>
+
+	<div class="left">
+		<p>Menu esquerdo.</p>
+	</div>
+
+	<div class="main">
+		<p>Conteúdo principal.</p>
+	</div>
+
+	<div class="right">
+		<p>Conteúdo da direita.</p>
+	</div>
+
+	<h2>Exemplo completo de uma página web responsiva</h2>
+	<section style="font-family: Verdana; color: #aaaaaa;">
+		<div style="background-color: #e5e5e5; padding: 15px;text-align: center;">
+			<h1>Hello World</h1>
+		</div>
+
+		<div style="overflow:auto">
+			<div class="menu">
+				<a href="#">Link 1</a>
+				<a href="#">Link 2</a>
+				<a href="#">Link 3</a>
+				<a href="#">Link 4</a>
+			</div>
+		
+			<div class="main2">
+				<h2>Lorum Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+			</div>
+
+			<div class="right2">
+				<h2>Sobre</h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+			</div>
+		</div>
+
+		<div style="background-color: #e5e5e5; text-align: center; padding: 10px; margin-top: 7px;">© copyright w3schools.com</div>
+	</section>
+
+	<!-- Frameworks de design responsivo: W3.CSS, Bootstrap, Foundation, Materialize -->
+	
+</body>
+</html>
