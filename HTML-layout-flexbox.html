@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Layouts em HTML</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+
+		body{
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		/* Estilo do cabeçalho */
+		header{
+			background-color: #666;
+			padding: 30px;
+			text-align: center;
+			font-size: 35px;
+			color: white;
+		}
+
+		section{
+			display: -webkit-flex;
+			display: flex;
+		}
+
+		/* Criar duas colunas que flutuam próximas uma a outra */
+		nav{
+			-webkit-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+			background-color: #ccc;
+			padding: 20px;
+		}
+
+		/* Estiliza a linha dentro do menu */
+		nav ul{
+			list-style-type: none;
+			padding: 0;
+		}
+
+		article{
+			-webkit-flex: 3;
+			-ms-flex: 3;
+			flex: 3;
+			padding: 10px;
+			background-color: #f1f1f1;
+		}
+
+		/* Estilo do rodapé */
+		footer{
+			background-color: #777;
+			padding: 10px;
+			text-align: center;
+			color: white;
+		}
+
+		/* Layout responsivo - fazer duas colunas uma acima da outra invés da próxima de cada uma, em telas pequenas */
+		@media (max-width: 600px){
+			section{
+				-webkit-flex-direction: column;
+				flex-direction: column;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h2>CSS Layout Flexbox</h2>
+	<p>Neste exemplo, nós temos criado um cabeçalho, 2 colunas e um rodapé. Em telas mais pequenas, as colunas se organizarão uma acima da outra.</p>
+	<p>Redefina o tamanho do browser e veja a magia da responsividade.</p>
+
+	<header>Cidades</header>
+
+	<section>
+		<nav>
+			<ul>
+				<li><a href="#">Londres</a></li>
+				<li><a href="#">Paris</a></li>
+				<li><a href="#">Toquio</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			<h1>Londres</h1>
+			<p>Londres é a capital da Inglaterra. É a mais populosa cidade do Reino Unido, com uma área metropolitana de cerca de 13 milhões de habitantes.</p>
+			<p>Situada no Rio Tâmisa, Londres tem sido um grande assentamento por dois milênios, a história é longa e começa com os romanos, que a chamaram de Londinium.</p>
+		</article>
+	</section>
+
+	<footer>
+		<p>Footer</p>
+	</footer>
+
+</body>
+</html>
