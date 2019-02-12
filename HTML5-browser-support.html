@@ -1,0 +1,52 @@
+<!-- HTML5 é suportado em todos os navegadores modernos. Porém alguns browser antigos, pela não compatibilidade com algumas tags, não conseguem exibir os conteúdos necessários. Desta forma, temos que ensinar os navegadores a como mostrar alguns desses conteúdos -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Suporte de HTML5 em navegadores antigos</title>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<style>
+		/* Para assegurar um comportamento correto em navegadores antigos, você pode configurar a exibição do CSS para estes elementos HTML para block */
+		header, section, footer, aside, nav, main, article, figure{
+			display: block;
+		}
+
+		myHero{
+			display: block;
+			background-color: #dddddd;
+			padding: 50px;
+			font-size:30px;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Pode-se adicionar novos elementos para uma página HTML com um truquezinho -->
+	<h1>Um cabeçalho</h1>
+	<myHero>Elemento My Hero!</myHero>
+
+	<!-- O código em Javascript document.createElement é necessário para criar um novo elemento em IE9, o antecessor -->
+	<script>document.createElement("myHero")</script>
+	<!-- O internet explorer não permite estilizar elementos desconhecidos. Porém, Sjoerd Visscher criou o HTML5Shiv. É um script em Javascript para que se possa eswtilizar elementos HTML5 em versões do Internet Explorer antes do IE9. -->
+
+	<section>
+		<h1>Cidades famosas</h1>
+
+		<article>
+			<h2>London</h2>
+			<p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+		</article>
+
+		<article>
+			<h2>Paris</h2>
+			<p>Paris is the capital and most populous city of France.</p>
+		</article>
+
+		<article>
+			<h2>Tokyo</h2>
+			<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+		</article>
+	</section>
+
+</body>
+</html>
