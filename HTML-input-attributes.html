@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Atributos de input em HTML</title>
+</head>
+<body>
+	<!-- O atributo value especifica o valor inicial do campo input. -->
+	<h2>Atributo value</h2>
+	<form action="#">
+		Primeiro nome:<br>
+		<input type="text" name="firstname" value="Lucas">
+	</form>
+
+	<!-- O atributo readonly especifica que o conteúdo presente no input só pode ser lido, e não alterado. -->
+	<h2>Atributo readonly</h2>
+	<form action="#">
+		Primeiro nome:<br>
+		<input type="text" name="firstname" value="Lucas" readonly>
+	</form>
+
+	<!-- O atributo disabled especifica que o campo está desabilitado. Não é usável e nem clicável e seu valor não será enviado quando o formulário for inserido. -->
+	<h2>Atributo disabled</h2>
+	<form action="#">
+		Primeiro nome:<br>
+		<input type="text" name="firstname" value="Lucas" disabled>
+	</form>
+
+	<!-- O atributo size especifica o tamanho do campo medido em caracteres. -->
+	<h2>Atributo size</h2>
+	<form>
+		Primeiro nome:<br>
+		<input type="text" name="firstname" value="Lucas" size="40">
+	</form>
+
+	<!-- O atributo maxlength especifíca o máximo de caracteres aceitos pelo campo de texto. -->
+	<!-- Este atributo não apresenta nenhum feedback. Se você quiser alertar o usuário, você deve escrever códigos Javascript. -->
+	<h2>Atributo maxlength</h2>
+	<form action="#">
+		Primeiro nome:<br>
+		<input type="text" name="firstname" maxlength="10">
+	</form>
+
+	<h1>Mais atributos adicionados pelo HTML5</h1>
+	<!-- O atributo autocomplete especifica se um formulário ou seus respectivos campos devem ter a função de autocompletar ou não. Quando o função autocompletar está ativa, o navegador automaticamente  completa a inserção de valor baseado em informações anteriores que foram colocadas. -->
+	<!-- Este atributo trabalha com form e os seguintes tipos de input: text, search, url, tel, email, password, datepicker, range e color. -->
+	<h2>Atributo autocomplete</h2>
+	<form action="#" autocomplete="on">
+		Primeiro nome:<input type="text" name="fname"><br>
+		Último nome:<input type="text" name="lname"><br>
+		E-mail:<input type="email" name="email" autocomplete="off">
+		<input type="submit" name="submit">
+	</form>
+
+	<!-- O atributo novalidate especifica que o formulário não deve validar nada quando os dados são submetidos. -->
+	<h2>Atributo novalidate</h2>
+	<form action="#" novalidate>
+		E-mail:<input type="email" name="user_email">
+		<input type="submit" name="submit">
+	</form>
+
+	<!-- O atributo autofocus especifica qual campo deve ser o foco quando a página carregar. -->
+	<h2>Atributo autofocus</h2>
+	<form action="#">
+		Primeiro nome:<input type="text" name="fname" autofocus><br>
+		Último nome:<input type="text" name="lname"><br>
+		<input type="submit" name="submit">
+	</form>
+
+	<!-- O atributo form especifica um ou mais formulários que um input pode pertencer -->
+	<h2>Atributo form</h2>
+	<form action="#" id="form1">
+		Primeiro nome:<input type="text" name="fname"><br>
+		<input type="submit" value="Submit">
+	</form>
+
+	Último nome: <input type="text" name="lname" form="form1">
+
+	<!-- O atributo formaction especifica a URL do arquivo que irá processa as informações submetidas. Este atributo sobrescreve o action do elemento form.Pode ser usado para inputs do tipo submit e image -->
+	<h2>Atributo formaction</h2>
+	<form action="#">
+		Primeiro nome:<input type="text" name="fname"><br>
+		Último nome:<input type="text" name="lname"><br>
+		<input type="submit" value="Submit"><br>
+		<input type="submit" formaction="#" value="Submit as admin">
+	</form>
+
+	<!-- O atributo formenctype especifica como os dados inseridos devem ser codificados quando submetidos. -->
+	<!-- O atributo formenctype sobrescreve o atributo enctype do elemento form -->
+	<!-- Pode ser usado para inputs do tipo submit e image -->
+	<!-- Só funciona se o formulário estiver com método post -->
+	<h2>Atributo formenctype</h2>
+	<form action="#" method="post">
+		Primeiro nome:<input type="text" name="fname">
+		<input type="submit" value="submit">
+		<input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+	</form>
+
+	<!-- O atributo formmethod define o método HTTP para enviar os dados do formulário na URL ativa. Subrescreve o método GET do formulário -->
+	<h2>Atributo formmethod</h2>
+	<form action="#" method="get">
+		Primeiro nome: <input type="text" name="fname"><br>
+		Último nome: <input type="text" name="lname"><br>
+		<input type="submit" value="Submit">
+		<input type="submit" formmethod="post" value="Submit using POST">
+	</form>
+
+	<!-- O atributo formnovalidate subrescreve o novalidate do elemento form. Pode ser usado com o tipo de input submit -->
+	<h2>Atributo formnovalidate</h2>
+	<form action="#">
+		E-mail:<input type="email" name="userid">
+		<input type="submit" value="submit">
+		<input type="submit" formnovalidate value="Submit without validation">
+	</form>
+
+	<!-- O atributo formtarget especifica um nome ou palavra chave que indica onde mostrar a resposta que é recebida após submeter um formulário. -->
+	<!-- Sobrescreve o target do elemento form. -->
+	<!-- Pode ser usado para os tipos de input submit e image -->
+	<h2>Atributo formtarget</h2>
+	<form action="#">
+		Primeiro nome: <input type="text" name="fname"><br>
+		Último nome: <input type="text" name="lname"><br>
+		<input type="submit" value="Submit as normal">
+		<input type="submit" formtarget="_blank" value="Submit to a new window">
+	</form>
+
+	<!-- Os atributos height e width especificam a altura e largura, respectivamente, de um elemento. -->
+	<h2>Atributos height e width</h2>
+	<input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+
+	<!-- O atributo lista se refere ao elemento datalist que contém opções pre-definidas para um elemento input -->
+	<h2>Atributo lista</h2>
+	<input list="browsers">
+
+	<datalist id="browsers">
+		<option value="Internet Explorer">
+		<option value="Firefox">
+		<option value="Chrome">
+		<option value="Opera">
+		<option value="Safari">
+	</datalist>
+
+	<!-- Os atributos min e max especificam o mínimo e o máximo de valores para um elemento input. Estes atributos trabalham com os seguintes tipos de input: number, range, datetime-local, month, time e week -->
+	<h2>Atributos min e max</h2>
+	<form action="#">
+		Entre com uma data anterior a 1980-01-01:
+		<input type="date" name="bday" max="1979-12-31"><br>
+
+		Entre com uma data posterior a 2000-01-01:
+		<input type="date" name="bday" min="2000-01-02"><br>
+
+		Quantidade (entre 1 e 5):
+		<input type="number" name="quantity" min="1" max="5"><br>
+	</form>
+
+	<!-- O atributo múltiplo especifica que o usuário está permitido a entrar com mais de um valor no campo. Este atributo funciona com os tipos de input file e email -->
+	<form>
+		Selecione as imagens:
+		<input type="file" name="img" multiple>
+	</form>
+
+	<!-- O atributo pattern especifica uma expressão regular que o input deve verificar antes de aceitar a submissão. Funciona nos seguintes tipos de input: text, search, url, tel, email e password-->
+	<h2>Atributo pattern</h2>
+	<form>
+		Código do país: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+		<input type="submit" name="submit">
+	</form>
+
+	<!-- O atributo placeholder especifica uma dica que descreve o valor esperado do campo a ser preenchido. A dica é mostrada no campo antes do usuário entrar com um valor. Consegue trabalhar com os seguintes tipos de input: text, search, url, email e password -->
+	<h2>O atributo required</h2>
+	<form>
+		<input type="text" name="fname" placeholder="First name">
+	</form>
+
+	<!-- O atributo required especifica que um campo deve ser preenchido antes de submeter o formulário. Este atributo funciona para text, search, url, tel, email, password, date pickers, number, checkbox, radio, e file. -->
+	<h2>O atributo</h2>
+	<form>
+		Username: <input type="text" name="usrname" required>
+		<input type="submit" name="submit">
+	</form>
+
+	<!-- O atributo step especifica o número legal de intervalos para um elemento input. O step trabalha com os seguintes tipos de input -->
+	<h2>Atributo step</h2>
+	<form>
+		<input type="number" name="points" step="3">
+	</form>
+
+</body>
+</html>
