@@ -755,3 +755,5 @@ Elementos semânticos em HTML5:
 <section>	Defines a section in a document
 <summary>	Defines a visible heading for a <details> element
 <time>	Defines a date/time
+
+-> Guia de estilos e convenções de código.
