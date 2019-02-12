@@ -614,3 +614,7 @@ step	Specifies the legal number intervals for an input field
 value	Specifies the default value for an input field
 
 <input type="">	Specifies the input type to display
+
+Tag	Description
+<form>	Defines an HTML form for user input
+<input>	Defines an input control
