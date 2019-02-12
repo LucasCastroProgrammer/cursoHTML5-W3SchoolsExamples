@@ -71,5 +71,112 @@
 	<h2>Type = "button"</h2>
 	<input type="button" onclick="alert('Hello World!')" value="Clique aqui!">
 
+	<!-- tipo color: é usado para campos de dados que devem conter uma cor. Dependendo do suporte do browser, um calendário será apresentado para selecionar a data. -->
+	<h2>Type = "color"</h2>
+	<form>
+		Selecione a sua cor favorita:
+		<input type="color" name="favcolor">
+	</form>
+
+	<!-- tipo date: é usado para campos de texto que devem conter data. Dependendo do suporte do browser, um calendário será apresentado para selecionar a data. -->
+	<h2>Type = "date"</h2>
+	<form>
+		Aniversário:
+		<input type="date" name="bday">
+	</form>
+
+	<!-- pode-se usar também os atributos min e max para restrição de datas -->
+	<h2>Exemplo de restrição de datas</h2>
+	<form>
+		Entre com uma data anterior a 1980-01-01:
+		<input type="date" name="bday" max="1979-12-31"><br>
+		Entre com uma data posterior a 2000-01-01:
+		<input type="date" name="bday" min="2000-01-02">
+	</form>
+
+	<!-- tipo datetime-local: especifica a data e hora no campo de dados, sem zona de horário. Dependendo do suporte do browser, um calendário será apresentado para selecionar a data. -->
+	<h2>Type = "datetime-local"</h2>
+	<form>
+		Aniversário (data e hora):
+		<input type="datetime-local" name="bdaytime">
+	</form>
+
+	<!-- tipo email: é usado para campos de dados onde deve conter endereços de e-mail. Dependendo do suporte do browser, o endereço de e-mail pode ser automaticamente validado quando enviado. Alguns celulares reconhecem campos com tipos de e-mail e adicionam um ".com" no teclado para ajudar na inserção do endereço. -->
+	<h2>Type = "email"</h2>
+	<form>
+		E-mail:
+		<input type="email" name="email"><br>
+		<input type="submit" name="submit">
+	</form>
+
+	<!-- tipo file: define um campo de seleção de arquivos e um botão do navegador para upload dos mesmos. -->
+	<h2>Type = "file"</h2>
+	<form>
+		Selecione um arquivo: <input type="file" name="myFile">
+	</form>
+
+	<!-- tipo month: permite o usuário a selecionar o mês e ano. Dependendo do suporte do browser, um calendário será apresentado para selecionar a data.  -->
+	<h2>Type = "month"</h2>
+	<form>
+		Aniversário (mês e ano):
+		<input type="month" name="bdaymonth">
+	</form>
+
+	<!-- define um campo de inserção de dados numérico.
+	Você também pode configurar restrições de quais números podem ser aceitos usando os atributos min e max. -->
+	<h2>Type = "number"</h2>
+	<form>
+		Quantidade (entre 1 a 5):
+		<input type="number" name="quantity"  min="1" max="5">
+	</form>
+
+	<h1>Restrições em inputs!</h1>
+	<!-- O exemplo a seguir mostra um campo numérico, onde se pode colocar valores de 0 até 100, de dez em dez. O valor padrão é 30. -->
+	<h2>Restrição de números</h2>
+	<form>
+		Quantidade:
+		<input type="number" name="points" min="0" max="100" step="10" value="30">
+	</form>
+
+	<!-- tipo range: define um controle de entrada de números no qual o valor exato não é tão inportante. Um range default geralmente vai de 0 até 100. No entanto, você pode configurar restrições em que números são aceitos com min, max e step, como vimos no exemplo anterior -->
+	<h2>Type = "range"</h2>
+	<input type="range" name="points" min="0" max="10">
+
+	<!-- type search: é usado para campos de pesquisa. -->
+	<h2>Type = "search"</h2>
+	<form>
+		Google:
+		<input type="search" name="googlesearch">
+	</form>
+
+	<!-- tipo tel é usado para campos de inserção de dados que devem conter números de telefone. Somente o safari tem suporte ao tipo tel. -->
+	<h2>Type = "tel"</h2>
+	<form>
+		Telefone:
+		<input type="tel" name="usrtel">
+	</form>
+
+	<!-- tipo time: permite ao usuário selecionar a hora (sem zona de horário). Dependendo do suporte do browser, um calendário será apresentado para selecionar a data. -->
+	<h2>Type = "time"</h2>
+	<form>
+		Selecione um horário:
+		<input type="time" name="usr_time">
+	</form>
+
+	<!-- tipo url: é usado para campos de texto que contém um endereço URL. Dependendo do suporte do browser, o campo URL pode ser automaticamente validado quando submetido. Alguns smartphones reconhecem tipos url e adicionam a opção ".com" no teclado para ajudar na inserção dos dados. -->
+	<h2>Type = "url"</h2>
+	<form>
+		Adicionar sua página WEB:
+		<input type="url" name="homepage">
+		<input type="submit" name="submit">
+	</form>
+
+	<!-- tipo week: permite o usuário a selecionar uma semana e ano. Dependendo do suporte do browser, um calendário pode ser exibido para ajudar na escolha da informação. -->
+	<h2>Type = "week"</h2>
+	<form>
+		Selecione uma semana:
+		<input type="week" name="week_year">
+	</form>
+
 </body>
 </html>
