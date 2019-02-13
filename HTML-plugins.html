@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Plug-ins em HTML</title>
+</head>
+<body>
+
+	<!-- O propósito de um plug-in é estender a funcionalidade de um navegador web -->
+
+	<!-- 
+	Plug-ins são programas de computador que se estendem da funcionalidade padrão de um navegador web.  
+	
+	Um bom exemplo de plug-ins são os Java Applets.
+	
+	Plug-ins são adicionados as páginas web com as tags object ou embed.
+
+	Plug-ins podem ser usados para muitos propósitos: mostrar mapas, scanear vírus, verificar id do banco, entre outros.
+	-->
+
+	<!-- 
+	O elemento object é suportado em todos os navegadores.
+
+	O elemento object define um objeto embutido dentro de um documento HTML.
+
+	É usado para embutir plugins(como Java Applets, leitores de PDF, Flash Players) em páginas web.
+	-->
+
+	<h2>Exemplo inicial</h2>
+	<object width="400" height="50" data="bookmark.swf"></object>
+
+	<!-- O elemento objeto também pode ser usado para incluir HTML dentro do HTML -->
+	<h2>HTML dentro de HTML</h2>
+	<object width="100%" height="500px" data="HTML-css.html"></object>
+
+	<!-- Podemos adicionar imagens também... -->
+	<object data="img_girl.jpg"></object>
+
+	<!-- 
+	O elemento embed é suportado em todos os grandes navegadores.
+	O elemento embed também define um objeto embutido dentro de um documento HTML
+	Navegadores tem suportado embed a muito tempo. Porém, não tem feito parte da especifição do HTML antes do HTML5 
+	-->
+
+	<h2>Exemplo inicial de embed</h2>
+	<embed width="400" height="50" src="bookmark.swf">
+
+	<h2>HTML dentro de HTML com embed</h2>
+	<embed width="100%" height="500px" src="HTML-css.html">
+
+	<h2>Adicionando imagens</h2>
+	<embed src="img_girl.jpg">
+
+</body>
+</html>
