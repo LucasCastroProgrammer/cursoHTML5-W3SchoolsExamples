@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Geolocalização em HTML</title>
+</head>
+<body>
+	
+	<!-- 
+	A API de geolocalização do HTML é usada para capturar uma posição geográfica de um usuário.
+	Já que isso é um compromisso de privacidade, a posição não está disponível a não ser que o usuário o aprove
+	-->
+
+	<!-- Geolocalização é mais acurada para dispositivos com GPS, como smartphones. -->
+
+	<!-- 
+		Suporte para navegadores:
+		-> Chrome: 5.0;
+		-> IE: 9.0;
+		-> Firefox: 3.5;
+		-> Safari: 5.0;
+		-> Opera: 16.0;
+	-->
+
+	<h2>Exemplo 1 - Obter coordenadas</h2>
+	<p>Clique no botão para obter suas coordenadas atuais.</p>
+
+	<button onclick="getLocation()">Obter coordenadas</button>
+
+	<p id="demo"></p>
+
+	<script>
+		var x = document.getElementById("demo");
+
+		function getLocation(){
+			/* No código abaixo, será checado se a Geolocalização está disponível para o navegador, se sim, vai executar o método para pegar a posição atual. Se não mostra uma mensagem para o usuário.
+			Se o método getCurrentPosition for executado corretamente, vai retornar as coordenadas para uma função específica através do parâmetro, no caso showPosition.
+			O showPosition retorna a latitude e a longitude.
+			*/
+			if(navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(showPosition, showError);
+			}else{
+				x.innerHTML = "O recurso de geolocalização não é suportado para este navegador.";
+			}
+		}
+
+		function showPosition(position){
+			x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+		}
+
+		/*No código abaixo, a página se adianta para possíveis erros no caso de não conseguir obter a localização*/
+		function showError(error){
+			switch(error.code){
+				case error.PERMISSION_DENIED:
+				x.innerHTML = "User denied the request for Geolocation."
+				break;
+				case error.POSITION_UNAVAILABLE:
+				x.innerHTML = "Location information is unavailable."
+				break;
+				case error.TIMEOUT:
+				x.innerHTML = "The request to get user location timed out."
+				break;
+				case error.UNKNOWN_ERROR:
+				x.innerHTML = "An unknown error occured.";
+			}
+		}
+
+		/* Geolocalização de objetos:
+		Outros métodos interessantes são:
+		watchPosition() - Retorna a posição atual do usuário e continua a retornar a posição atualizada enquanto o usuário se move.
+		*/
+		/*Clear watch - Para de executar o watchPosition*/
+		/*Para testar este comando, é recomendado o uso de um smartphone com GPS*/
+	</script>
+</body>
+</html>
