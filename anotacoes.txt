@@ -822,3 +822,13 @@ MP4; Suportado em HTML5
 -> Tags de áudio em HTML5:
 <audio>	Defines sound content
 <source>	Defines multiple media resources for media elements, such as <video> and <audio>
+
+Retorno de dados do método getCurrentPosition:
+coords.latitude	The latitude as a decimal number (always returned)
+coords.longitude	The longitude as a decimal number (always returned)
+coords.accuracy	The accuracy of position (always returned)
+coords.altitude	The altitude in meters above the mean sea level (returned if available)
+coords.altitudeAccuracy	The altitude accuracy of position (returned if available)
+coords.heading	The heading as degrees clockwise from North (returned if available)
+coords.speed	The speed in meters per second (returned if available)
+timestamp	The date/time of the response (returned if available)
