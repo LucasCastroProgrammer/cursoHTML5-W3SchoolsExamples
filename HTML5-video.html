@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Vídeos em HTML5</title>
+</head>
+<body>
+	<h2>Exemplo 1</h2>
+	<video width="400" controls>
+		<source src="bunny.mp4" type="video/mp4">
+		Seu navegador não suporta vídeos em HTML5.
+	</video>
+
+	<p>Vídeo cortesia de <a href="https://www.bigbuckbunny.org">Big Buck Bunny</a></p>
+
+	<!-- Antes do HTML5, um vídeo só poderia ser executado em um navegador com um plug-in.
+	A tag video especifica um caminho padrão para embutir o vídeo na página web.
+	-->
+
+	<!-- Suporte para navegadores:
+		-> Chrome: 4.0;
+		-> IE: 9.0;
+		-> Mozilla Firefox: 3.5;
+		-> Safari: 4.0;
+		-> Opera: 10.5;
+	-->
+
+	<h2>Exemplo 2</h2>
+	<video width="320" height="240" controls>
+		<source src="bunny.mp4" type="video/mp4">
+		Seu navegador não suporta o tag VIDEO do HTML5.
+	</video>
+
+	<!-- O atributo controls adiciona controles de vídeo como play, pause e volume. É sempre uma boa ideia incluir atributos width e height. Se a altura e largura não estão configurados, a página qeb pode apresentar problemas no carregamento dos vídeos. -->
+	<!-- O elemento source permite especificar vídeos de onde o navegador possa pegar a mídia disponível em sua máquina. -->
+
+	<!-- Para iniciar o vídeo automaticamente, use o atributo autoplay -->
+	<h2>Atributo autoplay</h2>
+	<video width="320" height="240" autoplay>
+		<source src="bunny.mp4" type="video/mp4">
+		Seu navegador não suporta a tag VIDEO do HTML5	
+	</video>
+	
+	<!-- O atributo autoplay não funciona em alguns dispositivos mobile como ipad e iphone -->
+
+	<!-- Suporte de navegadores:
+		-> IE: só suporta MP4;
+		-> Chrome: suporta todos os formatos de HTML5;
+		-> Mozilla Firefox: suporta todos os formatos de HTML5;
+		-> Safari: só suporta mp4;
+		-> Opera: suporta todos os formatos de HTML5; 
+	-->
+
+	<!-- Tipos de mídia em HTML5 
+		MP4 - vídeo/mp4;
+		WebM - vídeo/webm;
+		Ogg - video/ogg;
+	-->
+
+	<!-- O HTML define elementos, propriedades e eventos DOM para o elemento video. Isto permite você carregar, tocar, e pausar vídeos, tanto quanto pular para momentos específicos do vídeo e volume.
+	Há também eventos DOM que podem notificar você quando um vídeo começa a ser executado e pausado.
+	-->
+
+	<h2>Controles através de recursos do DOM</h2>
+	<div style="text-align: center">
+		<button onclick="playPause()">Play/Pause</button>
+		<button onclick="makeBig()">Big</button>
+		<button onclick="makeSmall()">Small</button>
+		<button onclick="makeNormal()">Normal</button>
+		<br><br>
+		<video id="video1" width="420">
+			<source src="bunny.mp4" type="video/mp4">
+			Seu navegador não suporta vídeos em HTML5
+		</video>
+	</div>
+
+	<script>
+		var myVideo = document.getElementById("video1");
+
+		function playPause(){
+			if(myVideo.paused)
+				myVideo.play();
+			else
+				myVideo.pause();
+		}
+
+		function makeBig(){
+			myVideo.width = 560;
+		}
+
+		function makeSmall(){
+			myVideo.width = 320;
+		}
+
+		function makeNormal(){
+			myVideo.width = 420;
+		}
+	</script>
+
+	<p>Vídeo cortesia de <a href="https://www.bigbuckbunny.org/">Big Buck Bunny</a></p>
+
+</body>
+</html>
