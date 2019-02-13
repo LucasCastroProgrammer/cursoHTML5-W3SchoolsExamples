@@ -814,7 +814,11 @@ Ogg; Suportado em HTML5
 MP3; Suportado em HTML5 
 MP4; Suportado em HTML5
 
--> Tags de vídeo em HTML:
+-> Tags de vídeo em HTML5:
 <video>	Defines a video or movie
 <source>	Defines multiple media resources for media elements, such as <video> and <audio>
 <track>	Defines text tracks in media players
+
+-> Tags de áudio em HTML5:
+<audio>	Defines sound content
+<source>	Defines multiple media resources for media elements, such as <video> and <audio>
