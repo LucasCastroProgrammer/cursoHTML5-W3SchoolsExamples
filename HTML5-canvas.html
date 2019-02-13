@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Canvas em HTML</title>
+</head>
+<body>
+	<!-- O elemento HTML canvas é usado para desenhar gráficos em uma página WEB via javascript. Canvas possui diversos métodos para pinturas como círculos, caixas, textos e adicionar imagens. -->
+
+	<!-- Suporte de browser:
+		-> Chrome: 4.0;
+		-> IE: 9.0;
+		-> Mozilla Firefox: 2.0;
+		-> Safari: 3.1;
+		-> Opera: 9.0;
+	-->
+
+	<!-- Exemplos de canvas -->
+	<!-- Canvas é uma área retangular em uma página HTML. Por padrão, um canvas não tem bordas e nem conteúdo. -->
+	<!-- Exemplo de tag do canvas -->
+	<h2>Meu primeiro canvas</h2>
+	<canvas id="myCanvas" width="200" height="100" style="border: 1px solid #000000;">Seu navegador não suporta o tag CANVAS do HTML5.</canvas>
+	<!-- Sempre especifique um atributo id, uma largura e altura para definir o tamanho do canvas. Para adicionar borda, use o atributo style. -->
+
+	<h2>Desenhando uma linha!</h2>
+	<canvas id="myCanvas2" width="200" height="100" style="border: 1px solid #d3d3d3;"></canvas>
+
+	<h2>Desenhando um círculo!</h2>
+	<canvas id="myCanvas3" width="200" height="100" style="border: 1px solid #d3d3d3;">Seu navegador não suporta a tag CANVAS do HTML5</canvas>
+
+	<h2>Desenhando um texto!</h2>
+	<canvas id="myCanvas4" width="200" height="100" style="border: 1px solid #d3d3d3;">Seu navegador não suporta a tag CANVAS do HTML5.</canvas>
+
+	<h2>Desenhando um texto mais encorpado!</h2>
+	<canvas id="myCanvas5" width="200" height="100" style="border: 1px solid #d3d3d3;">Seu navegador não suporta a tag CANVAS do HTML5</canvas>
+
+	<h2>Desenhando um gradiente linear!</h2>
+	<canvas id="myCanvas6" width="200" height="100" style="border: 1px solid #d3d3d3;">Seu navegador não suporta a tag CANVAS do HTML5.</canvas>
+
+	<h2>Desenhando um gradiente circular</h2>
+	<canvas id="myCanvas7" width="200" height="100" style="border: 1px solid #d3d3d3;">Seu navegador não suporta a tag canvas do HTML5</canvas>
+
+	<h2>Desenhando uma imagem!</h2>
+	<h2>Imagem que será usada!</h2>
+	<img id="scream" src="img_the_scream.jpg" alt="The Scream" width="220" height="277">
+
+	<p>Canvas para preencher:</p>
+	<canvas id="myCanvas8" width="250" height="300" style="border: 1px solid #d3d3d3;">Seu navegador não suporta a tag CANVAS do HTML5</canvas>
+
+	<p><button onclick="myCanvas8()">Tente agora!</button></p>
+
+	<script>
+		//Script do myCanvas2
+		var c2 = document.getElementById("myCanvas2");
+		var ctx2 = c2.getContext("2d");
+		ctx2.moveTo(0,0);
+		ctx2.lineTo(200,100);
+		ctx2.stroke();
+	</script>
+
+	<script>
+		//Script do myCanvas3
+		var c3 = document.getElementById("myCanvas3");
+		var ctx3 = c3.getContext("2d");
+		ctx3.beginPath();
+		ctx3.arc(95,50,40,0,2*Math.PI);
+		ctx3.stroke();
+	</script>
+
+	<script>
+		//Script do myCanvas4
+		var c4 = document.getElementById("myCanvas4");
+		var ctx4 = c4.getContext("2d");
+		ctx4.font = "30px Arial";
+		ctx4.fillText("Hello World", 10, 50);
+	</script>
+
+	<script>
+		//Script do myCanvas5
+		var c5 = document.getElementById("myCanvas5");
+		var ctx5 = c5.getContext("2d");
+		ctx5.font = "30px Arial";
+		ctx5.strokeText("Hello World", 10, 50);
+	</script>
+
+	<script>
+		var c6 = document.getElementById("myCanvas6");
+		var ctx6 = c6.getContext("2d");
+		//Agora vamos criar o gradiente
+		var grd6 = ctx6.createLinearGradient(0,0,200,0);
+		grd6.addColorStop(0,"red");
+		grd6.addColorStop(1,"white");
+		//Preencher com gradiente
+		ctx6.fillStyle = grd6;
+		ctx6.fillRect(10,10,150,80);
+	</script>
+
+	<script>
+		var c7 = document.getElementById("myCanvas7");
+		var ctx7 = c7.getContext("2d");
+
+		//Criar o gradiente
+		var grd7 = ctx7.createRadialGradient(75,50,5,90,60,100);
+		grd7.addColorStop(0,"red");
+		grd7.addColorStop(1,"white");
+
+		//Preencher com gradiente
+		ctx7.fillStyle = grd7;
+		ctx7.fillRect(10,10,150,80);
+	</script>
+
+	<script>
+		function myCanvas8(){
+			var c8 = document.getElementById("myCanvas8");
+			var ctx8 = c8.getContext("2d");
+			var img = document.getElementById("scream");
+			ctx8.drawImage(img, 10, 10);
+		}
+	</script>
+
+</body>
+</html>
