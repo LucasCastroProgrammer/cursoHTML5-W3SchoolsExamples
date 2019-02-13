@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Áudio em HTML5</title>
+</head>
+<body>
+	<!-- Antes do HTML5, arquivos de áudio só seriam executados com algum tipo de plugin (como o flash). -->
+	<!-- A tag audio especifica um caminho padrão para embutir áudio em uma página web -->
+
+	<!-- Suporte para navegadores:
+		-> Chrome: 4.0;
+		-> IE: 9.0;
+		-> Mozilla Firefox: 3.5;
+		-> Safari: 4.0;
+		-> Opera: 10.5;
+	-->
+
+	<!-- Para tocar um arquivo de áudio em HTML, use a tag áudio. -->
+	<h2>Áudio 1</h2>
+	<audio controls>
+		<source src="som.ogg" type="audio/ogg">
+			Seu navegador não suporta o elemento de áudio.
+	</audio>
+
+	<!-- 
+		O atributo controle adiciona controle ao áudio como play, pause e volume.
+		
+		O source permite especificar um arquivo de vídeo alternativo, no qual o browser deve escolher. De primeira, o navegador vai tentar reconhecer o formato do arquivo.
+
+		O texto entre a tag audio só será mostrado se houver algum problema de suporte com este formato.
+	-->
+
+	<!-- 
+		Suporte de navegadores com relação a extensão(MP3, WAV e OGG):
+		-> IE: só funciona com MP3;
+		-> Chrome: todos funcionam;
+		-> Firefox: todos funcionam;
+		-> Safari: não funciona o OGG;
+		-> Opera: todos funcionam;
+	-->
+
+	<!-- 
+		Tipos de mídia em HTML:
+		MP3: audio/mpeg;
+		OGG: audio/ogg;
+		WAV: audio/wav;
+	-->
+
+	<!-- 
+		HTML5 define elementos DOM, propriedades e eventos para o elemento audio.
+
+		Isso permite você carregar, tocar, e pausar áudios tanto quanto configurar a duração e o volume.
+
+		Há também eventos DOM que podem te notificar quando um áudio começa a tocar, é pausado, entre outros.
+	-->
+
+</body>
+</html>
