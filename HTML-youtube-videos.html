@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Vídeos do Youtube em HTML</title>
+</head>
+<body>
+	<!-- 
+	A maneira mais fácil de exibir vídeos em HTML, é usar o Youtube.
+	Poupa tempo ao não precisar converter os vídeos para vários formatos.
+	-->
+
+	<h2>Primeiro vídeo de Youtube em meu HTML</h2>
+	<iframe width="420" height="315" src="https://www.youtube.com/embed/-u-j7uqU7sI"></iframe>
+
+	<!-- 
+	Você pode ter seu vídeo começando automaticamente quando um usuário visitar aquela página adicionando um simples parâmetro para sua URL do Youtube.
+	Value 0 (default): o vídeo não irá executar automaticamente quando o tocador carregar.
+	Value 1: o vídeo íra tocar automaticamente quando o player carregar.
+	-->
+
+	<iframe width="420" height="315" src="https://www.youtube.com/embed/-u-j7uqU7sI?autoplay=1"></iframe>
+
+	<!-- 
+	Repetir a exibição do vídeo
+	Value 0 (default): o vídeo irá tocar uma vez.
+	Value 1: o vídeo fará um loop, ou seja, tocará eternamente
+	-->
+	<iframe width="420" height="315" src="https://www.youtube.com/embed/-u-j7uqU7sI?loop=1"></iframe>
+
+	<!-- 
+	Para habilitar a exibição de controles no vídeo
+	Value 0: player não mostra os controles.
+	Value 1 (default): player mostra os controles.
+	-->
+	<iframe width="420" height="315" src="https://www.youtube.com/embed/-u-j7uqU7sI?controls=0"></iframe>
+
+	<!-- 
+	O suporte para links do youtube nos elementos object e embed foram descontinuados em Janeiro de 2015. Usar somente o iframe para links do Youtube.
+	-->
+
+</body>
+</html>
