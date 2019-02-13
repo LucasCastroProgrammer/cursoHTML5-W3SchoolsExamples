@@ -770,3 +770,46 @@ Support for event handlers
 Best suited for applications with large rendering areas (Google Maps)
 Slow rendering if complex (anything that uses the DOM a lot will be slow)
 Not suited for game applications
+
+-> Multimídia em HTML:
+
+Em web, multimídia é som, música, vídeos, filmes e animações.
+
+Multimídia vem de diferentes formatos. Pode ser também qualquer coisa que você escuta ou vê. Exemplos: imagens, música, som, vídeos, gravações, filmes, animações e mais.
+
+Páginas web geralmente contém elementos multimídia de diferentes tipos e formatos.
+
+Suporte de navegadores:
+Antigamente os navegadores davam suporte somente para texto, limitados a uma fonte somente e uma cor.
+Depois, vieram novas versões com suporte para cores, fontes e imagens!
+Áudio, vídeo e animação são apresentados de forma diferente pela maioria dos navegadores. Diferentes formatos tem sido suportados e alguns formatos requerem ajuda extra de programas para funcionar.
+
+Formatos multimídia:
+Arquivos multimídia possuem diversos formatos, nos quais os principais são:
+.swf, .wav, .mp3, .mpg, .wmv e .avi
+
+Formatos comuns de vídeo:
+O melhor?
+MP4 é o novo e futuro formato de vídeos na Internet.
+Outros:
+MPEG;
+AVI;
+WMV;
+QuickTime;
+RealVideo;
+Flash;
+Ogg; Suportado em HTML5
+WebM; Suportado em HTML5
+MPEG-4 ou MP4; Suportado em HTML5
+
+Formatos de áudio:
+O mais popular é o MP3, e o mais recomendado também.
+Outros:
+MIDI;
+RealAudio;
+WMA;
+AAC;
+WAV; Suportado em HTML5
+Ogg; Suportado em HTML5
+MP3; Suportado em HTML5 
+MP4; Suportado em HTML5
