@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<!-- HTML Web Storage é bem melhor do que cookies. -->
+	<!-- O que é o HTML Web Storage?
+		Com Web storage, aplicações WEB podem armazenar dados localmente com o navegador do usuário.
+		Antes do HTML5, dados de aplicações tinham que ser armazenados em cookies, inclusos em toda requisição de servidor. Web Storage é mais seguro, e uma larga quantidade de dados podem ser armazenados localmente sem afetar a performance do site.
+		Ao contrário de cookies, o limite de armazenamento e bem mais largo (pelo menos 5MB) e a informação nunca é transferida para o servidor.
+		Web Storage é por origem (por domínio e protocolo). Todas as páginas, de uma origem, podem armazenar e acessar a mesma informação. 
+	-->
+	<!-- Suporte para navegadores:
+		-> Chrome: 4.0;
+		-> IE: 8.0;
+		-> Firefox: 3.5;
+		-> Safari: 4.0;
+		-> Opera: 11.5;
+	-->
+	<!-- O HTML Web Storage providencia dois objetos para armazenar dados no cliente:
+		-> window.localStorage - armazena dados sem expiração por data.
+		-> window.sessionStorage - armazena dados para uma sessão (Ous seja, a informação é perdida quando se fecha a aba do navegador);
+	-->
+
+	<!-- O objeto localstorage armazena informação sem expiração por data. A informação não será deletada do navegador quando o último for fechado e estará disponível no próximo dia, semana ou ano. -->
+	<h2>Exemplo 1 - Web Storage com localStorage</h2>
+	<div id="result"></div>
+
+	<h2>Exemplo 2 - Web Storage com localStorage</h2>
+	<!-- Ao clicar no botão, haverá incrementação -->
+	<p><button onclick="clickCounter()" type="button">Clique aqui!</button></p>
+	<div id="result2"></div>
+
+	<!-- O objeto sessionStorage é igula ao objeto localStorage, exceto que amrazena a informação por apenas uma sessão. A informação é deletada quando o usuário fecha a aba específica do navegador. O exemplo abaixo conta o número de vezes que um usuário tem clicado no botão, na sessão atual -->
+	<h2>Exemplo 3 - Web Storage com sessionStorage</h2>
+	<p><button onclick="clickCounter2()" type="button">Clique aqui de novo</button></p>
+	<div id="result3"></div>
+
+	<script>
+		//Checando suporte para o navegador
+		if(typeof(Storage) !== "undefined"){
+			//Armazenar a informação
+			localStorage.setItem("lastname","Smith");
+			//Recuperar a informação
+			document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+		}
+		else{
+			//Avisa o usuário caso o navegador usado não tenha suporte para o Web Storage
+			document.getElementById("result").innerHTML = "Desculpe, seu navegador não dá suporte ao Web Storage...";
+		}
+	</script>
+
+	<script>
+		function clickCounter(){
+			//Verificar se o navegador dá suporte ao Web Storage
+			if(typeof(Storage) !== "undefined"){
+				//Se o usuário já houver clicado no botão antes,...
+				if (localStorage.clickCount) {
+					//...incrementa o valor!
+					localStorage.clickCount = Number(localStorage.clickCount)+1;
+				}
+				//Se não, valor inicial é 1
+				else{
+					localStorage.clickCount = 1;
+				}
+
+				//Exibição do resultado
+				document.getElementById("result2").innerHTML = "Você clicou no botão " + localStorage.clickCount + " vez(es)!";
+			}
+			else{
+				//Avisa que o navegador não dá suporte
+				document.getElementById("result2").innerHTML = "Desculpe, seu navegador não dá suporte para Web Storage...";
+			}
+		}
+	</script>
+
+	<script>
+		function clickCounter2(){
+			//Verifica se o navegador dá suporte a Web Storage
+			if(typeof(Storage) !== "undefined"){
+				//Se o botão já foi clicado na sessão,...
+				if(sessionStorage.clickCount){
+					//...incrementa
+					sessionStorage.clickCount = Number(sessionStorage.clickCount)+1;
+				}
+				//Se não, começa com o valor padrão 1
+				else{
+					sessionStorage.clickCount = 1;
+				}
+
+				//Mostra o resultado de cliques da sessão
+				document.getElementById("result3").innerHTML = "Você clicou no botão " + sessionStorage.clickCount + " vez(es) nessa sessão!;"			
+			}
+			//Se o navegador não der suporte, mostra a mensagem abaixo.
+			else{
+				document.getElementById("result3").innerHTML = "Desculpe, seu navegador não suporta Web Storage...";
+			}
+		}
+	</script>
+</body>
+</html>
