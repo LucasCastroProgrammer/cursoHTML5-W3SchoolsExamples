@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Eventos Server-sent em HTML</title>
+</head>
+<body>
+	<!-- Os eventos server-sent permitem a uma página web obter atualizações dos servidores -->
+	<!-- Também é possível a página web perguntar se alguma atualização está disponível. -->
+	<!-- Exemplos de uso: atualizações de Twitter e Facebook, atualizações dos valores do mercado de ações, feed de notícias, resultados esportivos, entre outros! -->
+
+	<!-- 
+		Suporte de navegadores: 
+		-> Chrome: 6.0;
+		-> IE: não suportado;
+		-> Firefox: 6.0;
+		-> Safari: 5.0;
+		-> Opera: 11.5
+	-->
+
+	<h2>Exemplo de Server-sent</h2>
+	<div id="result"></div>
+
+	<script>
+		//Verificar se o browser dá funcionalidade 
+		if(typeof(EventSource)!=="undefined"){
+			//Criar um objeto EventSource e especificar a URL da página enviando as atualizações (que é o demo_sse.php)
+			var source = new EventSource("demo_sse.php");
+			//Toda vez que uma atualização é recebida, um evento onmessage ocorre
+			source.onmessage = function(event) {
+				//Quando o evento onmessage ocorrer, coloque as informações recebidas no elemento id="result"
+				document.getElementById("result").innerHTML += event.data + "<br>";
+			};
+		}
+		else{
+			document.getElementById("result").innerHTML = "Desculpe, mas seu navegador não dá suporte aos eventos server-sent...";
+		}
+	</script>
+</body>
+</html>
