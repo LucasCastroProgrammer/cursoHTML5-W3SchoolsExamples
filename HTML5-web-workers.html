@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Web Workers em HTML</title>
+	<script src="demo_workers.js"></script>
+</head>
+<body>
+	<!-- 
+		Um web worker é um javascript rodando em background, sem afetar a performance da página. 
+	-->
+	<!-- 
+		Quando um script é executado em uma página HTML, a página fica sem resposta até o script estar finalizado. 
+		Um web worker é um javascript que roda em background, independentemente de outros scripts, sem afetar a performance da página. Você pode continuar a fazer o que você quiser: clicando, selecionando coisas. enquanto o web worker roda em background
+	-->
+	<!-- 
+		Suporte de navegadores:
+		-> Chrome: 4.0;
+		-> IE: 10.0;
+		-> Firefox: 3.5;
+		-> Safari: 4.0;
+		-> Opera: 11.5;
+	 -->
+
+	 <!-- Se não rodar no chrome, é porque este navegador não deixa executar Web Workers a partir de arquivos locais. Para conseguir rodar, baixe uma extensão na Chrome Store chamada Web Server for Chrome. Escolha o diretório que está trabalhando e tente abrir o navegador novamente. -->
+	 <h2>Exemplo 1 - Web Workers</h2>
+	 <p>Contador de números: <output id="result"></output></p>
+	 <button onclick="startWorker()">Start Worker</button>
+	 <button onclick="stopWorker()">Stop Worker</button>
+
+	 <p><strong>Note:</strong> Internet Explorer 9 e versões anteriores não dão suporte aos Web Workers.</p>
+
+	 <script>
+	 	var w;
+
+	 	function startWorker(){
+	 		//Verificar se o navegador dá suporte para Web Workers
+	 		if(typeof(Worker) !== "undefined"){
+	 			//Se não houver um objeto worker instanciado, ele cria e roda o código presente no .js
+	 			if (typeof(w) == "undefined") {
+	 				w = new Worker("demo_workers.js");
+	 			}
+	 			//A partir deste código, podemos enviar e receber mensagem através do web worker.
+	 			w.onmessage = function(event){
+	 				document.getElementById("result").innerHTML = event.data;
+	 			}
+	 		}
+	 		//Mostra mensagem de erro caso o navegador não dê suporte ao web worker
+	 		else{
+	 			document.getElementById("result").innerHTML = "Desculpe, seu navegador não suporta Web Workers!"
+	 		}
+	 	}
+
+
+	 	function stopWorker(){
+	 		//Terminar os trabalhos do Web Workers
+ 			w.terminate();
+ 			//Possibilitar reuso do código.
+ 			w = undefined;
+ 		}
+	 </script>
+</body>
+</html>
