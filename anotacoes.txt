@@ -823,7 +823,7 @@ MP4; Suportado em HTML5
 <audio>	Defines sound content
 <source>	Defines multiple media resources for media elements, such as <video> and <audio>
 
-Retorno de dados do método getCurrentPosition:
+-> Retorno de dados do método getCurrentPosition:
 coords.latitude	The latitude as a decimal number (always returned)
 coords.longitude	The longitude as a decimal number (always returned)
 coords.accuracy	The accuracy of position (always returned)
@@ -832,3 +832,8 @@ coords.altitudeAccuracy	The altitude accuracy of position (returned if available
 coords.heading	The heading as degrees clockwise from North (returned if available)
 coords.speed	The speed in meters per second (returned if available)
 timestamp	The date/time of the response (returned if available)
+
+-> Algumas mensagens do objeto EventSource:
+onopen	When a connection to the server is opened
+onmessage	When a message is received
+onerror	When an error occurs
